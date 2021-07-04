@@ -1,5 +1,7 @@
 package br.lippe.testeando;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,6 +34,10 @@ public class Controller {
 		Usuario u = new Usuario("José",2);
 		ud.save(u);
 		log.info("novo usuário no BD "+u);
+		
+		List<Usuario> l = ud.findAll();
+		
+		
 		return u.getId();
 	
 	}
